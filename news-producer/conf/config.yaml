@@ -17,7 +17,7 @@ properties:
   external:
     newsgen_url: $NEWSGEN_URL|"http://192.168.18.23:5002/getnewsfeed"
     newsapi_url: $NEWSAPI_URL|"https://free-news.p.rapidapi.com/v1/search"
-    rapidapi_token: $RAPIDAPI_KEY|"EhEBolWiKY8OvjK13y4S7Ta3iH4af9oy"
+    rapidapi_token: $RAPIDAPI_KEY|"1234"
   database:
     host: $DB_HOST|localhost
     port: $DB_PORT|3306
