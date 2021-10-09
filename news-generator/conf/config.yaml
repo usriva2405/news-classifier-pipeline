@@ -1,0 +1,23 @@
+appName: news-generator
+logLevel: WARN
+
+properties:
+  namespace:
+    dns: http://127.0.0.1:5000/
+  cache:
+    redis_url: $REDIS_URL|redis://127.0.0.1:6379
+    redis_host: $REDIS_HOST|127.0.0.1
+    redis_user: $REDIS_USER|""
+    redis_port: $REDIS_PORT|6379
+    redis_password: $REDIS_PASSWORD|""
+    ttl: 180
+    max_size: 10000
+
+  database:
+    host: $DB_HOST|localhost
+    port: $DB_PORT|3306
+    user: $DB_USER|root
+    password: $DB_PASSWORD|passw0rd
+  olap:
+    sql_url: $OLAP_SQL_URL|localhost:8888/druid/v2/sql?pretty
+    native_url: $OLAP_NATIVE_URL|localhost:8888/druid/v2/native

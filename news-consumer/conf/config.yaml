@@ -1,0 +1,33 @@
+appName: news-consumer
+logLevel: WARN
+
+properties:
+  namespace:
+    dns: http://127.0.0.1:5000/
+  cache:
+    redis_host: $REDIS_HOST|127.0.0.1
+    redis_user: $REDIS_USER|""
+    redis_port: $REDIS_PORT|6379
+    redis_password: $REDIS_PASSWORD|"42a6A#8epiwj?A:R?DqCKpn5f"
+    ttl: 180
+    max_size: 10000
+  kafka:
+    broker_url: $KAFKA_BROKER_URL|192.168.18.23:9092
+    topic: $KAFKA_TOPIC|'news_feed'
+  mongo:
+    url: $MONGO_URL|192.168.1.12
+    port: $MONGO_PORT|27017
+    username: $MONGO_USERNAME|root
+    password: $MONGO_PASSWORD|example
+  external:
+    newsgen_url: $NEWSGEN_URL|"http://192.168.18.23:5002/getnewsfeed"
+    newsapi_url: $NEWSAPI_URL|"https://free-news.p.rapidapi.com/v1/search"
+    rapidapi_token: $RAPIDAPI_KEY|"EhEBolWiKY8OvjK13y4S7Ta3iH4af9oy"
+  database:
+    host: $DB_HOST|localhost
+    port: $DB_PORT|3306
+    user: $DB_USER|root
+    password: $DB_PASSWORD|passw0rd
+  olap:
+    sql_url: $OLAP_SQL_URL|localhost:8888/druid/v2/sql?pretty
+    native_url: $OLAP_NATIVE_URL|localhost:8888/druid/v2/native
